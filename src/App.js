@@ -1,10 +1,13 @@
 import './App.css';
+import Header from './components/Header/Header';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
   return (
-    <div>
-      Github User Search
-    </div>
+    <>
+      <Header />
+      <SearchBar />
+    </>
   );
 }
 
