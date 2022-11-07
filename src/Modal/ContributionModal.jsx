@@ -27,9 +27,7 @@ const ContributionModal = () => {
                                 onChange={item => setState([item.selection])}
                                 showSelectionPreview={true}
                                 moveRangeOnFirstSelection={false}
-                                months={2}
                                 ranges={state}
-                                direction="horizontal"
                                 preventSnapRefocus={true}
                             />
                         </div>
