@@ -2,13 +2,19 @@ import React from 'react';
 import ContributionModal from '../../Modal/ContributionModal';
 import styles from './SearchBar.module.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <>
-            <div className="container mt-5 mb-3 d-flex flex-wrap justify-content-between gap-3">
-                <form className='d-flex'>
-                    <input className={`${styles.inputField} form-control`} type='text' placeholder='Search user..' aria-label='Search' />
-                    <button className={`${styles.searchButton} btn btn-outline-success`}>Search</button>
+            <div className="container mt-4 mb-3 d-flex flex-wrap justify-content-between gap-3">
+                <form className='d-flex' onSubmit={props.handleSearch}>
+                    <input
+                        type='text'
+                        className={`${styles.inputField} form-control`}
+                        placeholder='Search user..'
+                        value={props.search}
+                        onChange={(e) => props.setSearch(e.target.value)}
+                    />
+                    <button disabled={props.search ? false : true} className={`${styles.searchButton} btn btn-success`}>Search</button>
                 </form>
 
                 {/* Select Contributions */}
