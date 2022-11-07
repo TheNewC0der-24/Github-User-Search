@@ -15,7 +15,9 @@ const SearchedUser = (props) => {
                                         <div className="card-body">
                                             <h5 className="card-title">Name</h5>
                                             <p className="card-text text-primary">
-                                                {user.name}
+                                                <a href={user.url} target="_blank" rel="noreferrer">
+                                                    {user.name}
+                                                </a>
                                             </p>
                                         </div>
                                     </div>
@@ -81,7 +83,9 @@ const SearchedUser = (props) => {
                                         <div className="card-body">
                                             <h5 className="card-title">Name</h5>
                                             <p className="card-text text-primary">
-                                                {props.searchUser.name ? props.searchUser.name : 'Not Found'}
+                                                <a href={props.searchUser.url} target="_blank" rel="noreferrer">
+                                                    {props.searchUser.name ? props.searchUser.name : 'Not Found'}
+                                                </a>
                                             </p>
                                         </div>
                                     </div>

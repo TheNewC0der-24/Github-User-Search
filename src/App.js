@@ -52,6 +52,7 @@ function App() {
       data = temp.map((user) => {
         return {
           name: user.name,
+          url: user.html_url,
           avatar: user.avatar_url,
           followers: user.followers,
           repo: user.public_repos,
@@ -63,6 +64,7 @@ function App() {
     else {
       data = {
         name: temp.data.name,
+        url: temp.data.html_url,
         avatar: temp.data.avatar_url,
         followers: temp.data.followers,
         repo: temp.data.public_repos,
