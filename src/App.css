@@ -17,3 +17,19 @@ input:focus {
     outline: 0 !important;
     box-shadow: none !important;
 }
+
+.rdrDateRangePickerWrapper {
+    display: flex !important;
+}
+
+@media (max-width: 600px) {
+    .rdrDateRangePickerWrapper {
+        flex-direction: column !important;
+    }
+
+    .rdrMonthsVertical {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
