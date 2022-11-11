@@ -14,3 +14,4 @@ npm i react-date-range
 npm i react-icons
 ```
 
+## Preview
