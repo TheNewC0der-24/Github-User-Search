@@ -1,5 +1,4 @@
 import React from 'react';
-import ContributionModal from '../../Modal/ContributionModal';
 import styles from './SearchBar.module.css';
 
 const SearchBar = (props) => {
@@ -16,13 +15,7 @@ const SearchBar = (props) => {
                     />
                     <button disabled={props.search ? false : true} className={`${styles.searchButton} btn btn-success`}>Search</button>
                 </form>
-
-                {/* Select Contributions */}
-                <button className="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#contributionModal">
-                    Contribution to/from
-                </button>
             </div>
-            <ContributionModal />
         </>
     )
 }
