@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -12,7 +12,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 
 
-import axios from 'axios';
+// import axios from 'axios';
 
 function App() {
 
