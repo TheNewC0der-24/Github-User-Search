@@ -1,9 +1,0 @@
-.nav {
-    background-color: #161b22;
-}
-
-@media (max-width: 500px) {
-    .nav .description {
-        display: none;
-    }
-}
