@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     },
 
     link: {
-        color: "#000",
+        color: "#0d1117",
         cursor: "pointer",
     },
 
@@ -77,7 +77,7 @@ function Header(props) {
             <Typography variant="h6" sx={{ my: 2 }}>
                 GitHub User Search
             </Typography>
-            <Divider />
+            <Divider sx={{ backgroundColor: "#8b949e" }} />
             <List>
                 {navItems.map((item, index) => (
                     <ListItem
@@ -171,7 +171,7 @@ function Header(props) {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', sm: 'block', md: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: "#0d1117", color: "#dee2e6" },
                     }}
                 >
