@@ -71,12 +71,6 @@ function Header(props) {
         setMobileOpen((prevState) => !prevState);
     };
 
-    const withoutAppBar = ["/search"];
-    const { pathname } = useLocation();
-    if (withoutAppBar.some((item) => pathname.includes(item))) {
-        return null;
-    }
-
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: "#0d1117", color: "#dee2e6" }}>
             <ImGithub style={{ marginTop: "1.5rem" }} size={40} />
