@@ -30,8 +30,13 @@ const Home = () => {
     const [createdDate, setCreatedDate] = useState("");
     const [updatedDate, setUpdatedDate] = useState("");
 
+    const headers = {
+        "Accept": "application/vnd.github.v3+json",
+        'Authorization': 'token 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'
+    }
+
     const getProfile = async () => {
-        const response = await axios.get('https://api.github.com/users/TheNewC0der-24');
+        const response = await axios.get('https://api.github.com/users/TheNewC0der-24', { headers: headers });
         setProfile(response.data);
 
         const cDate = new Date(response.data.created_at);
