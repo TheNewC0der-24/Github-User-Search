@@ -32,7 +32,7 @@ const Home = () => {
 
     const headers = {
         "Accept": "application/vnd.github.v3+json",
-        'Authorization': 'token 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'
+        'Authorization': 'token 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'
     }
 
     const getProfile = async () => {
