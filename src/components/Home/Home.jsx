@@ -30,9 +30,13 @@ const Home = () => {
     const [createdDate, setCreatedDate] = useState("");
     const [updatedDate, setUpdatedDate] = useState("");
 
+    const token = "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";
+
+    localStorage.setItem("token", token);
+
     const headers = {
         "Accept": "application/vnd.github.v3+json",
-        'Authorization': 'token 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'
+        'Authorization': `token ${localStorage.getItem("token")}`
     }
 
     const getProfile = async () => {
