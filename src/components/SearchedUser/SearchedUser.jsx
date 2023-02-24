@@ -58,7 +58,7 @@ const SearchedUser = ({ searchUser, userRepo, userFollowers }) => {
                 <Grid container spacing={5} sx={{ mt: 3, mb: 3 }}>
                     <Grid item xs={12} sm={12} md={6} lg={6}>
                         <Typography mb={3} variant='h5'>Repositories</Typography>
-                        {userRepo.slice(0, 8).map((repo) => (
+                        {userRepo.slice(0, 30).map((repo) => (
                             <Box key={repo.id} sx={{ display: "flex", justifyContent: "space-between", flexDirection: "column" }}>
                                 <Box>
                                     <Link href={repo.html_url} target="_blank" underline='hover' sx={{ fontSize: "20px" }}>{repo.name}</Link>
@@ -79,7 +79,7 @@ const SearchedUser = ({ searchUser, userRepo, userFollowers }) => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={6}>
                         <Typography mb={3} variant='h5'>Followers</Typography>
-                        {userFollowers.slice(0, 8).map((follower) => (
+                        {userFollowers.slice(0, 10).map((follower) => (
                             <Box key={follower.id}>
                                 <Box sx={{ display: "flex", gap: "1rem" }}>
                                     <Avatar
