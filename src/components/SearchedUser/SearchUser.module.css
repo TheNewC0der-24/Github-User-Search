@@ -1,0 +1,21 @@
+.box {
+    display: flex;
+    gap: 1rem;
+}
+
+.img {
+    max-width: 300px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex-wrap: wrap;
+    }
+
+    .img {
+        max-width: 100%;
+    }
+}
