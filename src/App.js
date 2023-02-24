@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import SearchBar from './components/SearchBar/SearchBar';
 import Home from './components/Home/Home';
-import About from './components/About/About';
 
 function App() {
 
@@ -17,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchBar />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
     </>

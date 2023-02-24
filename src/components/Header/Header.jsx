@@ -31,7 +31,6 @@ import { ImGithub } from 'react-icons/im';
 
 const drawerWidth = 240;
 const navItems = [
-    { label: "About", link: "/about" },
     { label: "Search User", link: "/search" }
 ];
 
