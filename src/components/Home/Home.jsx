@@ -31,13 +31,8 @@ const Home = () => {
     const [updatedDate, setUpdatedDate] = useState("");
 
 
-    const headers = {
-        "Accept": "application/vnd.github.v3+json",
-        'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-    }
-
     const getProfile = async () => {
-        const response = await axios.get('https://api.github.com/users/TheNewC0der-24', { headers: headers });
+        const response = await axios.get('https://api.github.com/users/TheNewC0der-24');
         setProfile(response.data);
 
         const cDate = new Date(response.data.created_at);

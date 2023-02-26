@@ -36,13 +36,8 @@ const SearchBar = () => {
 
     const [loading, setLoading] = useState(false);
 
-    const headers = {
-        "Accept": "application/vnd.github.v3+json",
-        'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-    }
-
     useEffect(() => {
-        axios.get("https://api.github.com/rate_limit", { headers: headers })
+        axios.get("https://api.github.com/rate_limit")
             .then((res) => {
                 setLimit(res.data.resources.core);
             })
@@ -55,7 +50,7 @@ const SearchBar = () => {
     const handleSearch = (e) => {
         e.preventDefault();
         setLoading(false);
-        axios.get(`https://api.github.com/users/${search}`, { headers: headers })
+        axios.get(`https://api.github.com/users/${search}`)
             .then((res) => {
                 setSearchUser(res.data);
                 setLoading(true);
@@ -64,7 +59,7 @@ const SearchBar = () => {
                 console.log(err);
             });
 
-        axios.get(`https://api.github.com/users/${search}/repos`, { headers: headers })
+        axios.get(`https://api.github.com/users/${search}/repos`)
             .then((res) => {
                 setUserRepo(res.data);
                 setLoading(true);
@@ -73,7 +68,7 @@ const SearchBar = () => {
                 console.log(err);
             });
 
-        axios.get(`https://api.github.com/users/${search}/followers`, { headers: headers })
+        axios.get(`https://api.github.com/users/${search}/followers`)
             .then((res) => {
                 setUserFollowers(res.data);
                 setLoading(true);
